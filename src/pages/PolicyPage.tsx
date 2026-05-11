@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Pagination from "../Pagination";
 import { PolicyCard } from "../components/PolicyCard";
 import { sortPolicy } from "../utilities/common";
 
@@ -19,17 +20,24 @@ const PolicyPage = () => {
         }, 1000);
       }, []);
     
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p className="flex justify-center m-20">Loading...</p>;
 
     return <li className="bg-[#d4d9e3] md:px-20">
-        {
-            data.map((policy, index) => {
-                console.log(index);
-                return <ul key={index} className={index == 0 ? "pt-4 pb-4 px-6 md:pt-8 md:pb-4 md:px-16" : "px-6 py-4 md:px-16 md:py-4"}>
-                    <PolicyCard policy={policy}></PolicyCard>
-                </ul>
-            })
-        }
+        <Pagination 
+        items={data} 
+        itemsPerPage={3} 
+        renderItem={(policy, index) => (
+            <ul 
+            key={index} 
+            className={index === 0 
+                ? "pt-4 pb-4 px-6 md:pt-8 md:pb-4 md:px-16" 
+                : "px-6 py-4 md:px-16 md:py-4"
+            }
+            >
+            <PolicyCard policy={policy} />
+            </ul>
+        )}
+        />
     </li>
 }
 
