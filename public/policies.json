@@ -1,4 +1,4 @@
-export const policies = [
+[
     {
       "policyNumber": "726100029411",
       "policyStart": "2026-05-01",
