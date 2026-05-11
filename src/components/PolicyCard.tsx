@@ -12,7 +12,7 @@ export function PolicyCard({ policy }) {
         {/* Left content */}
         <div className="min-w-0 flex-1">
           <h2 className="text-lg sm:text-xl font-bold">
-            <span className="text-brandBlue">Policy number:</span>{" "}
+            <span className="text-blue-700">Policy number:</span>{" "}
             <span className="font-semibold text-ink">{policy.policyNumber}</span>
           </h2>
 
@@ -83,7 +83,7 @@ export function PolicyCard({ policy }) {
               className="h-11 rounded-full border-2 border-brandBlue bg-brandYellow text-brandBlue font-semibold
                         hover:bg-[#ffd96a] active:bg-[#ffd14a]
                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brandBlue focus-visible:ring-offset-2
-                        w-full lg:w-auto lg:min-w-[220px]"
+                        w-full lg:w-auto lg:min-w-[220px] text-blue-700"
             >
               Make a claim
             </button>
@@ -93,7 +93,7 @@ export function PolicyCard({ policy }) {
               className="h-11 rounded-full border-2 border-brandBlue bg-white text-brandBlue font-semibold
                         hover:bg-[#ffd96a] active:bg-gray-100
                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brandBlue focus-visible:ring-offset-2
-                        w-full lg:w-auto lg:min-w-[220px]"
+                        w-full lg:w-auto lg:min-w-[220px] text-blue-700"
             >
               Manage my policy
             </button>
