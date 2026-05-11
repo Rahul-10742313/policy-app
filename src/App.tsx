@@ -1,9 +1,8 @@
+import PolicyPage from "./pages/PolicyPage";
 
 const App = () => {
     return(
-        <div>
-            This is home page.
-        </div>
+        <PolicyPage />
     )
 }
 
