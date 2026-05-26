@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Pagination from "../Pagination";
-import { PolicyCard } from "../components/PolicyCard";
+import PolicyCard from "../components/PolicyCard";
 import { sortPolicy } from "../utilities/common";
 
 const PolicyPage = () => {
@@ -22,7 +22,7 @@ const PolicyPage = () => {
     
     if (loading) return <p className="flex justify-center m-20">Loading...</p>;
 
-    return <li className="bg-[#d4d9e3] md:px-20">
+    return <li className="bg-primary-background md:px-50">
         <Pagination 
         items={data} 
         itemsPerPage={3} 

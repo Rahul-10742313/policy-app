@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+:root {
+    --color-primary: #1976D2;
+    --color-primary-button: #ffd96a;
+    --color-primary-focus: #ffd14a;
+    --color-secondary-color: #ffffff;
+    --color-secondary-focus: #f5f5f5;
+    --color-primary-background: #f5f5f5;
+}
+
+@theme {
+    --color-main: var(--color-primary);
+    --color-primary-color: var(--color-primary-button);
+    --color-primary-focus: var(--color-primary-focus);
+    --color-secondary-color: var(--color-secondary-color);
+    --color-secondary-focus: var(--color-secondary-focus);
+    --color-primary-background: var(--color-primary-background);
+}
+
+@utility primary-button {
+    @apply h-11 rounded-full border-2 font-semibold
+    bg-primary-color hover:bg-primary-focus focus:bg-primary-focus
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+    w-full lg:w-auto lg:min-w-[220px] text-main;
+}
+
+@utility secondary-button {
+    @apply h-11 rounded-full border-2 font-semibold
+    bg-secondary-color hover:bg-secondary-focus focus:bg-secondary-focus
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2
+    w-full lg:w-auto lg:min-w-[220px] text-main;
+}
